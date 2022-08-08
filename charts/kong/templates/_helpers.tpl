@@ -159,7 +159,7 @@ spec:
   ports:
   {{- if .http }}
   {{- if .http.enabled }}
-  - name: kong-{{ .serviceName }}
+  - name: http-kong-{{ .serviceName }}
     port: {{ .http.servicePort }}
     targetPort: {{ .http.containerPort }}
     appProtocol: http
@@ -170,7 +170,7 @@ spec:
   {{- end }}
   {{- end }}
   {{- if .tls.enabled }}
-  - name: kong-{{ .serviceName }}-tls
+  - name: tls-kong-{{ .serviceName }}-tls
     port: {{ .tls.servicePort }}
     targetPort: {{ .tls.overrideServiceTargetPort | default .tls.containerPort }}
     appProtocol: https
