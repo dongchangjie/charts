@@ -11,7 +11,7 @@ maintainers:
 name: kong
 sources:
 - https://github.com/Kong/charts/tree/main/charts/kong
-version: 2.11.01
+version: 2.11.1a
 appVersion: "2.8"
 dependencies:
 - name: postgresql
