@@ -170,7 +170,7 @@ spec:
   {{- end }}
   {{- end }}
   {{- if .tls.enabled }}
-  - name: tls-kong-{{ .serviceName }}-tls
+  - name: https-kong-{{ .serviceName }}-tls
     port: {{ .tls.servicePort }}
     targetPort: {{ .tls.overrideServiceTargetPort | default .tls.containerPort }}
     appProtocol: https
